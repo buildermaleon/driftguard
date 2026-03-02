@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  driftguard:
+    build: .
+    ports:
+      - "8080:8080"
+    volumes:
+      - driftguard-data:/data
+    environment:
+      - DATABASE_URL=/data/driftguard.db
+      - SCREENSHOT_DIR=/data/screenshots
+      - PORT=8080
+      - RUST_LOG=info
+    restart: unless-stopped
+
+volumes:
+  driftguard-data:

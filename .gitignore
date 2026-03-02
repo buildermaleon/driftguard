@@ -1,0 +1,37 @@
+# ===== SECRETS & SENSITIVE CONFIG =====
+.env
+.env.*
+!.env.example
+*.local
+config.json
+config.*.json
+!config.example.json
+secrets.json
+
+# ===== RUST =====
+target/
+Cargo.lock
+
+# ===== BUILD =====
+*.exe
+*.dll
+*.so
+*.dylib
+
+# ===== IDE =====
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# ===== OS =====
+.DS_Store
+Thumbs.db
+
+# ===== TEST/COV =====
+cov/
+*.profraw
+
+# ===== CREDENTIALS =====
+*.pem
+*.key
